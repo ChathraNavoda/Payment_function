@@ -1,0 +1,24 @@
+<h2>Payment Details</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let payment of details">
+            <td>{{payment.name}}</td>
+            <td>{{payment.phone}}</td>
+            <td>{{payment.email}}</td>
+            <td>
+                <button (click)="updatePayment(payment.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="deletePayment(payment.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click)="viewDetails(payment.id)" class="btn btn-info" style="margin-left: 10px">View</button>
+            </td>
+            
+        </tr>  
+    </tbody>
+</table>
